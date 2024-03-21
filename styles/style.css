@@ -133,6 +133,14 @@
   mix-blend-mode: hard-light;
 }
 
+@supports((text-stroke: 1px var(--label-color)) or (-webkit-text-stroke: 1px var(--label-color))) {
+  .mark {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--label-color);
+    text-stroke: 1px var(--label-color);
+  }
+}
+
 .content__card-text {
   margin: 22px 25px auto;
   display: flex;
@@ -214,19 +222,6 @@
   transform: scaleX(1);
 }
 
-.card__icon-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 54px;
-  height: 38px;
-  border: 2px solid transparent;
-  outline: none;
-  background-color: var(--background-color);
-  transition: outline 0.3s ease;
-  cursor: pointer;
-}
-
 .button::before {
   content: "";
   position: absolute;
@@ -260,10 +255,8 @@
 .dialog__title {
   font-family: var(--accent-fonts);
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
-  /* or 21px */
   text-transform: uppercase;
   color: var(--accent-color);
 }
