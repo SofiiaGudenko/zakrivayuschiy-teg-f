@@ -12,3 +12,123 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(4px);
+  }
+}
+
+.card__icon-button:hover .main-body {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear 0.05s;
+  }
+  .card__icon-button:hover .core {
+    fill: var(--accent-color);
+    transition: fill 0.3s linear;
+  }
+  
+  .card__icon-button:hover {
+    cursor: pointer;
+  }
+  
+  .card__icon-button:active .main-body {
+    fill: var(--sparks);
+    transition: fill 0.3s linear 0.05s;
+  }
+  
+  .card__icon-button:active .core {
+    fill: var(--sparks);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon.is-liked .contour {
+    fill: var(--sparks);
+    transition: fill 0.3s linear 0.06s;
+  }
+  
+  .like-icon.is-liked .main-body {
+    fill: var(--sparks);
+    transition: fill 0.3s linear 0.05s;
+  }
+  
+  .like-icon.is-liked .core {
+    fill: var(--sparks);
+    transition: fill 0.3s linear;
+  }
+  
+  .is-liked .heart {
+    animation: like-scale .3s ease-in .1s alternate;
+  }
+  
+  .is-liked .sparks {
+    animation: sparks .3s ease-in .3s alternate;
+  }
+  @keyframes sparks {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .sparks {
+    opacity: 0;
+    fill: var(--sparks);
+  }
+  
+  .main-body {
+    fill: var(--core);
+    transition: fill .3s linear;
+  }
+  
+  .core {
+    fill: var(--core);
+    transition: fill .3s linear .03s;
+  }
+  
+  .contour {
+    fill: var(--accent-color);
+    transition: fill 0.1s linear;
+  }
+  
+  @keyframes like-scale {
+    0% {
+      transform: scale(1);
+      transform-origin: 50% 50%;
+    }
+  
+    100% {
+      transform: scale(1.5);
+      transform-origin: 50% 50%;
+    }
+  }
+  
+  @keyframes like-shine {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
