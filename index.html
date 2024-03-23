@@ -18,8 +18,8 @@
   </head>
   <body class="page">
     <header class="header zone__content">
-      <h1 class="header__title">&lt;/HTML&gt;</h1>
-      <h2 class="header__title-text">Закрывающий тег</h2>
+      <a class="header__title">&lt;/HTML&gt;</a>
+      <h1 class="header__title-text">Закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -281,31 +281,26 @@
           </button>
         </div>
       </article>
+      <button class="button footer__btn" type="button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id">
+        <svg class="icon">
+          <use href="svg/floppy.svg#floppy"/>
+        </svg>
+        <span class="footet__btn-text">
+          Сохранить на&nbsp;память
+        </span>
+      </button>
   </main>
-  <footer class="footer">
-  <button class="button footer__btn" type="button" onclick="window['dialog-id'].showModal();" aria-controls="dialog-id">
-    <svg class="icon">
-      <use href="svg/floppy.svg#floppy">
-    </svg>
-    <p class="footet__btn-text">
-      Сохранить на память
-    </p>
-  </button>
   <dialog id="dialog-id">
     <div class="dialog__main">
       <svg class="icon">
-        <use href="svg/floppy.svg#floppy">
+        <use href="svg/floppy.svg#floppy"/>
       </svg>
-
       <h2 class="dialog__title">
-        Вставьте <br> дискету, чтобы <br> продолжить
+        Вставьте дискету, чтобы продолжить
       </h2>
     </div>
-
     <button class="dialog__btn button" onclick="window['dialog-id'].close()"><span class="button__text">ок</span></button>
   </dialog>
-  </footer>
-
     <script src="./scripts/like.js"></script>
   </body>
 </html>
