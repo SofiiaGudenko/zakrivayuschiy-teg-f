@@ -238,9 +238,6 @@
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--accent-color);
   border-color: var(--accent-color);
-}
-
-.button:focus-visible {
   outline: none;
 }
 
@@ -389,7 +386,7 @@ dialog[open] {
   
   .mark {
     top: 20px;
-    right: 10px 
+    right: 10px; 
   }
 
   .content__card-text {
